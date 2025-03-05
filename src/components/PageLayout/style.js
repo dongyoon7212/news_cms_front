@@ -5,4 +5,5 @@ export const layout = css`
 	width: 100vw; //모니터 기준
 	height: 100vh;
 	background-color: #ffffff;
+	display: flex;
 `;

@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import * as s from "./style";
 
-export default function pageLayout({ children }) {
+function PageLayout({ children }) {
 	return <div css={s.layout}>{children}</div>;
 }
+
+export default PageLayout;
