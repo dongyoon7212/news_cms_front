@@ -27,19 +27,19 @@ function SideBar() {
 							<li css={s.menuItem}>
 								<a href="/">
 									<MdDashboard />
-									대시보드
+									<p>Dashboard</p>
 								</a>
 							</li>
 							<li css={s.menuItem}>
 								<a href="/news">
 									<TiNews />
-									뉴스
+									<p>News</p>
 								</a>
 							</li>
 							<li css={s.menuItem}>
 								<a href="/category">
 									<MdCategory />
-									카테고리
+									<p>Category</p>
 								</a>
 							</li>
 						</ul>

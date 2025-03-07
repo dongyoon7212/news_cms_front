@@ -1,9 +1,12 @@
 import { css } from "@emotion/react";
 
 export const layout = css`
-	width: 17vw;
+	width: 21vw;
 	height: 100vh;
 	min-width: 200px; /* 최소 너비 설정 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	transition: width 0.3s ease-in-out;
 
 	@media (max-width: 992px) {
@@ -25,13 +28,12 @@ export const box = css`
 	align-items: center;
 	border: 1px solid black;
 	border-radius: 15px;
-	margin: 5%;
-	width: 95%;
+	width: 90%;
 	height: 95%;
-	background: rgb(50, 50, 55);
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 	background: linear-gradient(
 		180deg,
-		rgba(50, 50, 55, 1) 0%,
+		rgba(50, 50, 56, 1) 0%,
 		rgba(21, 21, 21, 1) 100%
 	);
 `;
@@ -46,7 +48,7 @@ export const logoBox = css`
 
 export const logo = css`
 	color: white;
-	font-size: 2rem;
+	font-size: 1.7rem;
 
 	@media (max-width: 768px) {
 		font-size: 1.5rem;
@@ -89,10 +91,11 @@ export const searchInput = css`
 	padding: 10px;
 	font-size: 1rem;
 	width: 80%;
+	height: 10%;
 	max-width: 250px;
 	color: white;
 	background-color: transparent;
-	border: 1px solid rgba(255, 255, 255, 0.3);
+	border: 0px solid rgba(255, 255, 255, 0.3);
 	border-radius: 5px;
 	outline: none;
 	transition: all 0.3s ease-in-out;
@@ -100,11 +103,11 @@ export const searchInput = css`
 	&::placeholder {
 		color: rgba(255, 255, 255, 0.5);
 	}
-
+	/* 
 	&:focus {
 		border-color: rgba(255, 255, 255, 0.7);
 		box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-	}
+	} */
 
 	@media (max-width: 768px) {
 		font-size: 0.9rem;
@@ -138,9 +141,10 @@ export const menuItem = css`
 	& a {
 		display: flex;
 		width: 100%;
-		padding: 1rem 1rem;
+		padding: 1rem 2rem;
 		font-size: clamp(0.9rem, 1.2vw, 1.2rem);
 		color: white;
+		line-height: 20px;
 		text-decoration: none;
 		transition: background-color 0.3s ease-in-out,
 			font-weight 0.3s ease-in-out;
@@ -149,6 +153,10 @@ export const menuItem = css`
 	& a:hover {
 		background-color: rgba(255, 255, 255, 0.1);
 		font-weight: bold;
+	}
+
+	& > a > p {
+		margin-left: 10px;
 	}
 
 	@media (max-width: 1200px) {
@@ -165,8 +173,8 @@ export const menuItem = css`
 
 	@media (max-width: 576px) {
 		font-size: 0.8rem;
-		& a {
+		/* & a {
 			padding: 0.8rem;
-		}
+		} */
 	}
 `;
