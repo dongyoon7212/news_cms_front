@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
 
 export const layout = css`
-	background-color: rgb(46, 58, 81);
 	width: 17vw;
 	height: 100vh;
 	min-width: 200px; /* 최소 너비 설정 */
@@ -24,12 +23,20 @@ export const box = css`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 100%;
-	height: 100%;
+	border: 1px solid black;
+	border-radius: 15px;
+	margin: 5%;
+	width: 95%;
+	height: 95%;
+	background: rgb(50, 50, 55);
+	background: linear-gradient(
+		180deg,
+		rgba(50, 50, 55, 1) 0%,
+		rgba(21, 21, 21, 1) 100%
+	);
 `;
 
 export const logoBox = css`
-	background-color: rgb(36, 45, 66);
 	width: 100%;
 	height: 10%;
 	display: flex;
@@ -51,7 +58,6 @@ export const logo = css`
 `;
 
 export const navBox = css`
-	background-color: rgb(46, 58, 81);
 	width: 100%;
 	height: 90%;
 	display: flex;
@@ -64,7 +70,19 @@ export const searchBox = css`
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: 15%;
+	height: 10%;
+`;
+
+export const border = css`
+	width: 100%;
+	height: 1px;
+	background: rgb(35, 35, 39);
+	background: linear-gradient(
+		90deg,
+		rgba(35, 35, 39, 1) 0%,
+		rgba(91, 91, 94, 1) 50%,
+		rgba(35, 35, 39, 1) 100%
+	);
 `;
 
 export const searchInput = css`
@@ -73,7 +91,7 @@ export const searchInput = css`
 	width: 80%;
 	max-width: 250px;
 	color: white;
-	background-color: rgb(36, 45, 66);
+	background-color: transparent;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	border-radius: 5px;
 	outline: none;
@@ -100,7 +118,7 @@ export const searchInput = css`
 
 export const menuBox = css`
 	width: 100%;
-	height: 85%;
+	height: 90%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -111,7 +129,6 @@ export const menuList = css`
 	list-style: none;
 	padding: 0;
 	width: 100%;
-	text-align: center;
 `;
 export const menuItem = css`
 	width: 100%;
@@ -120,10 +137,8 @@ export const menuItem = css`
 
 	& a {
 		display: flex;
-		justify-content: center;
-		align-items: center;
 		width: 100%;
-		padding: 1rem 0;
+		padding: 1rem 1rem;
 		font-size: clamp(0.9rem, 1.2vw, 1.2rem);
 		color: white;
 		text-decoration: none;

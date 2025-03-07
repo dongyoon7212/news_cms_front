@@ -1,4 +1,7 @@
 import React from "react";
+import { MdDashboard, MdCategory } from "react-icons/md";
+import { TiNews } from "react-icons/ti";
+
 /** @jsxImportSource @emotion/react */
 import * as s from "./style";
 
@@ -10,6 +13,7 @@ function SideBar() {
 					<h1 css={s.logo}>Stock News</h1>
 				</div>
 				<div css={s.navBox}>
+					<div css={s.border}></div>
 					<div css={s.searchBox}>
 						<input
 							css={s.searchInput}
@@ -17,16 +21,26 @@ function SideBar() {
 							placeholder="검색어를 입력해 주세요."
 						/>
 					</div>
+					<div css={s.border}></div>
 					<div css={s.menuBox}>
 						<ul css={s.menuList}>
 							<li css={s.menuItem}>
-								<a href="/">대시보드</a>
+								<a href="/">
+									<MdDashboard />
+									대시보드
+								</a>
 							</li>
 							<li css={s.menuItem}>
-								<a href="/news">뉴스</a>
+								<a href="/news">
+									<TiNews />
+									뉴스
+								</a>
 							</li>
 							<li css={s.menuItem}>
-								<a href="/categry">카테고리</a>
+								<a href="/category">
+									<MdCategory />
+									카테고리
+								</a>
 							</li>
 						</ul>
 					</div>
