@@ -7,7 +7,7 @@ export const cardStyle = css`
 	background: #fff;
 	border-radius: 12px;
 	padding: 20px;
-	width: 250px;
+	width: 20vw;
 	height: 120px;
 	position: relative;
 	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -31,24 +31,46 @@ export const iconStyle = (bgColor) => css`
 
 export const textBox = css`
 	display: flex;
+	width: 100%;
+	height: 100%;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 20px;
 `;
 
-export const titleStyle = css`
-	font-size: 14px;
+export const titleBox = css`
+	width: 100%;
+	height: 36%;
+	text-align: right;
+	font-size: 20px;
 	color: #666;
 `;
 
-export const valueStyle = css`
-	font-size: 22px;
+export const valueBox = css`
+	width: 100%;
+	height: 32%;
+	font-size: 28px;
 	font-weight: bold;
+	display: flex;
+	align-items: end;
 	color: #333;
 `;
 
-export const changeStyle = (textColor) => css`
-	font-size: 12px;
-	color: ${textColor};
+export const valueRateBox = css`
+	width: 100%;
+	height: 32%;
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+`;
+
+export const valueText = css`
+	font-size: 18px;
+	font-weight: bold;
+	display: flex;
+	align-items: end;
+`;
+
+export const upDownIcon = css`
+	font-size: 26px;
 `;
