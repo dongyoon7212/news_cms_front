@@ -36,32 +36,49 @@ export const newsContainer = css`
 	& > h1 {
 		font-size: 18px;
 		font-weight: bold;
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 	}
 `;
 
-export const newsBox = css`
-	& > ul {
-		display: flex;
-		flex-direction: column;
-		gap: 30px;
+export const newsItem = css`
+	border-bottom: 1px solid #ddd;
+	box-sizing: border-box;
+	padding: 15px 10px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.05);
 	}
 `;
 
-export const news = css`
-	text-decoration: none;
-	color: black;
-	width: 100%;
+export const newsHeader = css`
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 `;
 
 export const newsTitle = css`
-	width: 90%;
+	font-size: 16px;
+	font-weight: bold;
 `;
 
-export const newsInfo = css`
-	width: 10%;
-	display: flex;
-	justify-content: space-around;
+export const newsDate = css`
+	font-size: 14px;
+	color: #666;
+`;
+
+export const newsSummary = css`
+	font-size: 14px;
+	color: #444;
+	overflow: hidden;
+	transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+
+	& > p {
+		padding-top: 15px;
+	}
+`;
+
+export const newsSummaryVisible = css`
+	display: block;
 `;
