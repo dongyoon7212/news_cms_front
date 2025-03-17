@@ -2,6 +2,8 @@
 import { useEffect, useRef, useState } from "react";
 import Card from "../../components/Card/Card";
 import * as s from "./style";
+import { useQuery } from "@tanstack/react-query";
+import { getRecentNews } from "../../apis/news/newsApi";
 
 const cardsData = [
 	{
@@ -80,6 +82,20 @@ function MainPage() {
 	const toggleAccordion = (index) => {
 		setOpenIndex(openIndex === index ? null : index);
 	};
+
+	const { data, error, isLoading } = useQuery({
+		queryKey: ["getRecentNewsQuery"],
+		queryFn: async () => getRecentNews(),
+		retry: 0,
+		refetchOnWindowFocus: false,
+		onSuccess: (data) => {
+			console.log(data);
+		},
+		onError: (error) => {
+			console.log(error);
+		},
+	});
+	console.log(data.data)
 
 	useEffect(() => {
 		contentRefs.current.forEach((el, index) => {

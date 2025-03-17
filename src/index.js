@@ -4,13 +4,18 @@ import App from "./App";
 import { Reset } from "styled-reset";
 import { RecoilRoot } from "recoil";
 import { BrowserRouter } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient(); // queryClient = 데이터가 저장되는 캐싱 공간
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-	<RecoilRoot>
-		<BrowserRouter>
-			<Reset />
-			<App />
-		</BrowserRouter>
-	</RecoilRoot>
+	<QueryClientProvider client={queryClient}>
+		<RecoilRoot>
+			<BrowserRouter>
+				<Reset />
+				<App />
+			</BrowserRouter>
+		</RecoilRoot>
+	</QueryClientProvider>
 );
