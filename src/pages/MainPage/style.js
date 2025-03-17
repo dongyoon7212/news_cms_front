@@ -74,8 +74,13 @@ export const newsSummary = css`
 	overflow: hidden;
 	transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
 
-	& > p {
-		padding-top: 15px;
+	& > div {
+		padding-top: 20px;
+	}
+
+	& > div > a {
+		text-decoration: none;
+		color: black;
 	}
 `;
 

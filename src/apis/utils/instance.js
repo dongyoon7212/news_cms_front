@@ -1,7 +1,7 @@
 import axios from "axios";
-import getServerAddress from "../../constants/serverAddress";
+import { getServerAddress } from "../../constants/serverAddress";
 
-export const instance = axios.create({
+export const serverInstance = axios.create({
 	baseURL: getServerAddress(),
 	// headers: {
 	// 	Authorization: "Bearer " + localStorage.getItem("AccessToken"),

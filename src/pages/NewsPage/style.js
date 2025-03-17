@@ -51,11 +51,39 @@ export const news = css`
 `;
 
 export const newsTitle = css`
-	width: 90%;
+	width: 70%;
 `;
 
 export const newsInfo = css`
-	width: 10%;
+	width: 30%;
 	display: flex;
 	justify-content: space-around;
+`;
+
+export const pagination = css`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	gap: 10px;
+
+	& button {
+		background: #007bff;
+		color: white;
+		border: none;
+		padding: 8px 12px;
+		cursor: pointer;
+		border-radius: 5px;
+		font-size: 14px;
+	}
+
+	& button:disabled {
+		background: #ccc;
+		cursor: not-allowed;
+	}
+
+	& span {
+		font-size: 16px;
+		font-weight: bold;
+	}
 `;

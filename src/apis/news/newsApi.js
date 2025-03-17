@@ -1,7 +1,7 @@
-import { instance } from "../utils/instance";
+import { serverInstance } from "../utils/instance";
 
-export const getRecentNews = async () => {
-	return await instance.get("/news/recent");
+export const getNewsList = async (params) => {
+	return await serverInstance.get("/naver/list", { params });
 };
 
 // export const getBoardsAllBySearch = async (params) => {
